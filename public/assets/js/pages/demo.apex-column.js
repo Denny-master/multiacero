@@ -1,0 +1,89 @@
+colors=["#727cf5"];
+(dataColors=$("#datalabels-column").data("colors"))&&(colors=dataColors.split(","));
+options={
+  chart:{
+    height:300,
+    type:"bar",
+    toolbar:{
+      show:!1
+    }
+  },
+  plotOptions:{
+    bar:{
+      dataLabels:{
+        position:"top"}
+      }
+    },
+    dataLabels:{
+      enabled:!0,
+      formatter:function(o){return o+"%"},
+      offsetY:10,
+      style:{
+        fontSize:"13px",
+        colors:["#304758"]
+      }
+    },
+    colors:colors,
+    series:[
+      {
+        name:"Ventas",
+        data:[2,1,4,10,4,3,3,2,1,8,5,2]
+      }
+    ],
+    xaxis:{
+    categories:["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"],
+    position:"top",
+    labels:{offsetY:7},
+    axisBorder:{show:!1},
+    axisTicks:{show:!1},
+    crosshairs:{
+      fill:{
+        type:"gradient",
+        gradient:{
+          colorFrom:"#D8E3F0",
+          colorTo:"#BED1E6",
+          stops:[0,100],
+          opacityFrom:.4,
+          opacityTo:.5
+        }
+      }
+    },
+    tooltip:{
+      enabled:!0,
+      offsetY:-35
+    }
+  },
+  fill:{
+    gradient:{
+      enabled:!1,
+      shade:"light",
+      type:"horizontal",
+      shadeIntensity:.25,
+      gradientToColors:void 0,
+      inverseColors:!0,
+      opacityFrom:1,
+      opacityTo:1,
+      stops:[50,0,100,100]
+    }
+  },
+  yaxis:{
+    axisBorder:{show:!1},
+    axisTicks:{show:!1},
+    labels:{show:!1,formatter:function(o){return o+"%"}}
+  },
+  title:{
+    text:"Cliente Denny Castillo de Multiacero 2021",
+    floating:!0,
+    offsetY:350,
+    align:"center",
+    style:{color:"#444"}
+  },
+  grid:{
+    row:{
+      colors:["transparent","transparent"],
+      opacity:.2
+    },
+    borderColor:"#f1f3fa"
+  }
+};
+(chart=new ApexCharts(document.querySelector("#datalabels-column"),options)).render();
