@@ -110,3 +110,6 @@ Route::post('/almacenar_tipo_producto', 'TipoProductoController@store')->name('a
 /* -------------------------------- SUCURSAL ------------------------------- */
 Route::get('/registro_sucursal', 'SucursalController@create')->name('registro_sucursal');
 Route::post('/almacenar_sucursal', 'SucursalController@store')->name('almacenar_sucursal');
+
+/* -------------------------------- ENTREGA DE PEDIDOS  ------------------------------- */
+Route::get('/entrega_pedidos', 'EntregaPedidosController@index')->name('entrega_pedidos');

@@ -27,10 +27,10 @@
               <!-- LOGO -->
               <a href="index.html" class="topnav-logo">
                   <span class="topnav-logo-lg">
-                      <img src="{{asset('assets/images/logo-light.png')}}" alt="" height="16">
+                      <img src="{{asset('assets/images/LOGO_MULTIACERO.png')}}" alt="" height="50">
                   </span>
                   <span class="topnav-logo-sm">
-                      <img src="{{asset('assets/images/logo_sm.png')}}" alt="" height="16">
+                      <img src="{{asset('assets/images/LOGO_MULTIACERO.png')}}" alt="" height="50">
                   </span>
               </a>
               
@@ -102,7 +102,7 @@
                     <a class="nav-link dropdown-toggle nav-user arrow-none mr-0" data-toggle="dropdown" id="topbar-userdrop" href="#" role="button" aria-haspopup="true"
                     aria-expanded="false">
                     <span class="account-user-avatar"> 
-                        <img src="{{str_replace('public','storage/personal',asset(DB::table('empleados')->where('id',Auth::user()->id)->first()->foto))}}" alt="user-image" class="rounded-circle">
+                        <img src="{{asset('assets/images/fotoEdgar.png')}}"  alt="user-image" class="rounded-circle">
                     </span>
                     <span>
                         <span class="account-user-name">{{Auth::user()->user}}</span>
@@ -157,7 +157,7 @@
 
                     <div class="leftbar-user">
                         <a href="javascript: void(0);">
-                            <img src="{{str_replace('public','storage/personal',asset(DB::table('empleados')->where('id',Auth::user()->id)->first()->foto))}}" alt="user-image" height="42" class="rounded-circle shadow-sm">
+                            <img src="{{asset('assets/images/fotoEdgar.png')}}"  alt="user-image" height="42" class="rounded-circle shadow-sm">
                             <span class="leftbar-user-name">{{Auth::user()->user}}</span>
                         </a>
                     </div>
@@ -355,15 +355,31 @@
                                 </li> -->
                             </ul>
                         </li>
-
                         <li class="side-nav-item">
-                            <a href="#" target="_blank" class="side-nav-link">
+                            <a href="javascript: void(0);" class="side-nav-link">
                                 <i class="uil-globe"></i>
-                                <span class="badge badge-light float-right">New</span>
-                                <span> Vehiculos </span>
+                                <span> Entrega </span>
+                                <span class="menu-arrow"></span>
                             </a>
+                            <ul class="side-nav-second-level" aria-expanded="false">            
+                                <li>
+                                    <a href="{{url('/entrega_pedidos')}}">Visualizar</a>                                    
+                                </li>
+                               <!--  <li>
+                                    <a href="{{url('/listar_producto')}}">Lista</a>
+                                </li>
+                                <li class="side-nav-item">
+                                    <a href="javascript: void(0);" aria-expanded="false">Tipo
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul class="side-nav-third-level" aria-expanded="false">
+                                        <li>
+                                            <a href="{{url('/registro_tipo_producto')}}">Registrar</a>
+                                        </li>
+                                    </ul>
+                                </li> -->
+                            </ul>
                         </li>
-
                     </ul>
 
 
